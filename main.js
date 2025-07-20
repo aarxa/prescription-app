@@ -1,23 +1,22 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1024,
-    height: 768,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
-    }
+    width: 600,
+    height: 400,
+    show: false // You can make this true later for patient dashboard
   });
 
-  win.loadFile('index.html');
-  //win.webContents.openDevTools(); // Uncomment if you want dev tools
+  // Path to your local index.html file
+  const filePath = path.join(__dirname, 'index.html');
+
+  // ✅ Open the HTML in the user's default browser (offline!)
+  shell.openPath(filePath);
 }
 
 app.whenReady().then(createWindow);
 
-// macOS behavior
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
