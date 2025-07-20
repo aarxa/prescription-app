@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #f6f6f6 !important;
+}
+
+#prescription-form,
+#prescriptionTemplate {
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.07),
+        0px 0px 5.3px rgba(0, 0, 0, 0.05),
+        0px 0px 10px rgba(0, 0, 0, 0.042),
+        0px 0px 17.9px rgba(0, 0, 0, 0.035),
+        0px 0px 33.4px rgba(0, 0, 0, 0.028),
+        0px 0px 80px rgba(0, 0, 0, 0.02) !important;
+
+    background: white !important;
+}
+
+input,
+textarea,
+select,
+.btn {
+    text-decoration: none !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #0d91fd !important;
+}
+
+#prescriptionTemplate {
+    display: none;
+}
+
+#prescriptionTemplate :where(h1) {
+    color: rgb(0, 0, 0);
+    font-family: "grange", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    font-style: normal;
+    line-height: -1;
+}
+
+.one
+{
+    border: none;
+    border-top: 2px solid rgb(0, 0, 0);
+    margin-top: 1rem;
+    margin-bottom: -0.7rem;
+}
+
+.two {
+    border: none;
+    border-top: 2px solid rgb(0, 0, 0);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#prescriptionTemplate :where(p) {
+    margin-bottom: 0;
+}
+
+#nameT,
+#ageT,
+#genderT,
+#addressT,
+#dateT {
+    color: black;
+}
+
+@media (max-width: 767.5px) {
+    .prescription {
+        margin-top: 2rem !important;
+    }
+}
+
+@media print {
+    html, body {
+      height: 990px;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #prescriptionTemplate {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      box-shadow: none !important;
+      border: none !important;
+      page-break-inside: avoid !important;
+    }
+
+    .container {
+        padding: 1rem !important; /* Reduce padding to fit more comfortably */
+        margin: 0 auto !important;
+      }
+  
+    main {
+      flex-grow: 1 !important;
+    }
+
+    footer.footer-section {
+        margin-top: auto !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+.doctor-info {
+    margin-top: 1rem;
+  }
+  
+  .doctor-name {
+    font-family: 'grange', sans-serif;
+    font-weight: 700; /* Demi Bold */
+    font-size: 30.6px; /* 29pt */
+    line-height: 1.2;
+    font-style:normal;
+    /* margin-left: 1rem; */
+  }
+  
+  .doctor-sub {
+    font-family: 'grange', sans-serif;
+    font-weight: 700;
+    font-size: 17px; /* 12pt */
+    line-height: 1.4;
+    font-style:normal;
+}
+
+.clinic-address p {
+  font-family: 'muli', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 16px; /* 13pt */
+  line-height: 1.2;
+  margin: 0.25rem 0;
+  font-style: normal;
+}
+
+.footer-contact p{
+  font-family: 'muli', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 16px; /* 13pt */
+  line-height: 1.2;
+  margin: 0.1rem 0;
+  font-style: normal;
+}
+
+.clinic-address{
+    font-family: 'muli', sans-serif;
+    line-height: 1.4;
+    margin-top: 2.65rem; /* adjust this number as needed */
+  }
+  
+
+.rx {
+    font-family: "handsome-pro-classic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 49.3px; /* 52pt */
+    line-height: 1;
+}
+
+.patient-detail p {
+    font-family: 'muli', sans-serif;
+    font-weight: 400;
+    font-size: 15px; /* 15pt */
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+  }
+
+#medicineWrapper {
+  max-height: 600px;  /* You can fine-tune this number */
+  overflow: visible;
+}
+
+#medicineDetailsT {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#medicineDetailsT li {
+    font-family: 'muli', sans-serif;
+    font-weight: 400;
+    font-size: 15px; /* 15pt */
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+    font-style: normal;
+}
+
+/* New specific class to break the !important */
+.gap-after {
+    margin-bottom: 1rem !important;
+    margin-left: -0.1rem;
+}
+  
+  
+.doctor-footer{
+    font-family: 'muli', sans-serif;
+    font-weight: 700; /* Regular */
+    font-size: 17px; /* 13pt */
+}
+
+.circled {
+    display: inline-block;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    padding: 0.1em 0.4em;
+    margin-left: 0.25rem;
+    font-weight: 600;
+  }
+  
